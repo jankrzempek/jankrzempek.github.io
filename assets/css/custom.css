@@ -1,0 +1,148 @@
+/* Homepage hero photo: modern rounded-rectangle instead of circle. */
+#main #intro .spotlight .image.hero-photo {
+	border-radius: 16px;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+	background: transparent;
+	box-shadow: 0 14px 40px rgba(0, 0, 0, 0.14);
+}
+
+#main #intro .spotlight .image.hero-photo img {
+	border-radius: 0;
+	width: 18em;
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+@media screen and (max-width: 980px) {
+	#main #intro .spotlight .image.hero-photo img {
+		width: min(18em, 70vw);
+	}
+}
+
+/* Homepage minimal polish (scoped to index sections). */
+#toolbar.main.special {
+	padding-top: 2.25em;
+	padding-bottom: 1.5em;
+}
+
+#header.alt .home-title {
+	margin: 0;
+	font-weight: 800;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	line-height: 1.05;
+	font-size: clamp(2.2rem, 5.2vw, 4.25rem);
+}
+
+/* Subtle “extravagant” treatment without breaking minimal style. */
+body.min-dark #header.alt .home-title {
+	color: transparent;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.72));
+	-webkit-background-clip: text;
+	background-clip: text;
+	text-shadow: 0 18px 55px rgba(0, 0, 0, 0.35);
+}
+
+#toolbar .actions.special .button {
+	box-shadow: none;
+}
+
+/* Homepage: add spacing between sections. */
+body.home-min #main #intro {
+	margin-bottom: 1.5em;
+}
+
+#toolbar .actions.special .button.primary {
+	box-shadow: none;
+}
+
+/* Minimal dark theme: remove white panel and keep readability. */
+body.min-dark #main {
+	background-color: transparent;
+	color: rgba(255, 255, 255, 0.92);
+	border-radius: 0;
+}
+
+body.min-dark #main h1,
+body.min-dark #main h2,
+body.min-dark #main h3,
+body.min-dark #main h4,
+body.min-dark #main h5,
+body.min-dark #main h6,
+body.min-dark #main strong,
+body.min-dark #main b {
+	color: rgba(255, 255, 255, 0.95);
+}
+
+body.min-dark #main hr {
+	border-bottom-color: rgba(255, 255, 255, 0.18);
+}
+
+body.min-dark #main code {
+	background: rgba(0, 0, 0, 0.22);
+	border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Give sections a subtle glass background so text stays readable. */
+body.min-dark #main > section.main {
+	background: rgba(0, 0, 0, 0.22);
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+	border-radius: 16px;
+	box-shadow: none;
+}
+
+/* Buttons: minimal, high-contrast on dark. */
+body.min-dark #main .button {
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+	color: rgba(255, 255, 255, 0.92) !important;
+}
+
+body.min-dark #main .button:hover {
+	background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Replace template blue accents with minimal dark-glass highlight. */
+body.min-dark #main .button.primary,
+body.min-dark #toolbar .button.primary,
+body.min-dark #header .button.primary {
+	background-color: rgba(0, 0, 0, 0.35);
+	color: rgba(255, 255, 255, 0.95) !important;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.22);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+body.min-dark #main .button.primary:hover,
+body.min-dark #toolbar .button.primary:hover,
+body.min-dark #header .button.primary:hover {
+	background-color: rgba(0, 0, 0, 0.45);
+}
+
+/* CliniCheck page: app icon styling (matches minimal dark look). */
+body.min-dark #header .logo.app-icon {
+	border: 0;
+	padding: 0;
+	background: transparent;
+	box-shadow: 0 16px 45px rgba(0, 0, 0, 0.22);
+	border-radius: 24px;
+	overflow: hidden;
+}
+
+body.min-dark #header .logo.app-icon img {
+	display: block;
+	width: 104px;
+	height: 104px;
+	border-radius: inherit;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+@media screen and (max-width: 480px) {
+	body.min-dark #header .logo.app-icon img {
+		width: 84px;
+		height: 84px;
+	}
+}
